@@ -83,7 +83,7 @@ urlpatterns = [
         UserNotificationsView.as_view(), name='users_notifications'),
     url_frictionless_self_provider(r'^users/(?P<user>%s)/$' % USERNAME_PAT,
         UserProfileView.as_view(), name='users_profile'),
-    url_provider_only(r'activities/',
+    url_provider_only(r'^activities/',
         include('signup.urls.views.dashboard.contacts')),
 
     url_prefixed(r'^pricing/$',
